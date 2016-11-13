@@ -63,3 +63,5 @@ export Topology from 'grommet/components/Topology';
 export Value from 'grommet/components/Value';
 export Video from 'grommet/components/Video';
 export WorldMap from 'grommet/components/WorldMap';
+export MenuIcon from 'grommet/components/icons/base/Menu';
+export CloseIcon from 'grommet/components/icons/base/Close';

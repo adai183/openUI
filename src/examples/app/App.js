@@ -1,18 +1,21 @@
 import React from 'react';
-import { Navbar } from 'components';
+import { Navbar, Heading, App } from 'components';
 const links = [
   {
     name: 'Home',
-    url: '/'
+    url: '/',
   },
 ];
 
 const logo = 'https://github.com/RyanCCollins/cdn/blob/master/misc/logo_placeholder.png?raw=true';
 
-const App = () => (
-  <div>
+const ExampleApp = () => (
+  <App>
     <Navbar links={links} logo={logo} />
-  </div>
+    <Heading tag="h3">
+      Hello World
+    </Heading>
+  </App>
 );
 
-export default App;
+export default ExampleApp;
