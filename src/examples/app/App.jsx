@@ -1,5 +1,7 @@
 import React from 'react';
+/* eslint-disable */
 import { Navbar, Heading, App } from 'components';
+/* eslint-enable */
 const links = [
   {
     name: 'Home',
