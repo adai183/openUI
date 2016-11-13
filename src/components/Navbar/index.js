@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './index.module.css';
-import Header from 'grommet/components/Header';
-import Title from 'grommet/components/Title';
-import Anchor from 'grommet/components/Anchor';
-import Menu from 'grommet/components/Menu';
+import {
+  Menu,
+  Title,
+  Header,
+  Anchor,
+} from 'components';
 
 const Navbar = ({
   logo,
@@ -28,10 +30,7 @@ const Navbar = ({
 
 Navbar.propTypes = {
   logo: PropTypes.string,
-  links: PropTypes.shape({
-    url: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-  })
+  links: PropTypes.array.isRequired,
 };
 
 export default cssModules(Navbar, styles);
