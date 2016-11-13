@@ -22,6 +22,11 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components'),
     },
   },
+  sassLoader: {
+    includePaths: [
+      './node_modules',
+    ]
+  },
   module: {
     loaders: [
       {
@@ -33,6 +38,11 @@ module.exports = {
         test: /\.css$/,
         exclude: [/\.module\.css$/],
         loader: 'style-loader!css-loader!'
+      },
+      {
+        test: /\.scss$/,
+        exclude: [/\.inline\.scss$/, /\.module\.scss$/],
+        loader: 'style-loader!css-loader!sass-loader'
       },
       {
         test: /\.module\.css$/,

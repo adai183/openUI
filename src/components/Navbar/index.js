@@ -1,22 +1,37 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './index.module.css';
+import Header from 'grommet/components/Header';
+import Title from 'grommet/components/Title';
+import Anchor from 'grommet/components/Anchor';
+import Menu from 'grommet/components/Menu';
 
 const Navbar = ({
-  leftMenu,
-  rightMenu,
+  logo,
+  links,
 }) => (
   <nav className={styles.nav}>
-    <header className={styles.header}>
-      {rightMenu}
-      {leftMenu}
-    </header>
+    <Header justify="between">
+      <Title>
+        <img className={styles.logo} src={logo} alt="logo"/>
+      </Title>
+      <Menu direction="row" align="center" responsive={false}>
+        {links.map((item, i) =>
+          <Anchor key={i} href={item.url}>
+            {item.name}
+          </Anchor>
+        )}
+      </Menu>
+    </Header>
   </nav>
 );
 
 Navbar.propTypes = {
-  rightMenu: PropTypes.node,
-  leftMenu: PropTypes.node,
+  logo: PropTypes.string,
+  links: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  })
 };
 
 export default cssModules(Navbar, styles);
