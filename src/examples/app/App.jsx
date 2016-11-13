@@ -12,7 +12,7 @@ const links = [
 const logo = 'https://github.com/RyanCCollins/cdn/blob/master/misc/logo_placeholder.png?raw=true';
 
 const ExampleApp = () => (
-  <App>
+  <App centered={false} inline>
     <Navbar links={links} logo={logo} />
     <Heading tag="h3">
       Hello World

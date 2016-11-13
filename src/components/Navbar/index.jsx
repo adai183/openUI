@@ -108,18 +108,12 @@ class Navbar extends Component {
     );
   }
   renderMobile() {
-    const {
-      children,
-    } = this.props;
     return (
       <Split
         flex={this.state.mobileNav.active ? '' : 'right'}
         priority={this.state.mobileNav.active ? 'left' : 'right'}
       >
         {this.state.mobileNav.active && this.renderMobileMenu()}
-        <div>
-          {children}
-        </div>
       </Split>
     );
   }
@@ -169,9 +163,13 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   logo: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.object.isRequired),
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ),
   isResponsive: PropTypes.bool.isRequired,
-  children: PropTypes.node,
 };
 
 Navbar.defaultProps = {
