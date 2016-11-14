@@ -2,6 +2,7 @@
 export Navbar from './Navbar';
 export ResponsiveImage from './ResponsiveImage';
 export LoadingIndicator from './LoadingIndicator';
+export ToastMessage from './ToastMessage';
 
 /* PRAGMA: Grommet Components */
 export Accordion from 'grommet/components/Accordion';
