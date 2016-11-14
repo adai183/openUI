@@ -1,5 +1,5 @@
 # Open UI
-A React component library containing both primitives and complex UI. Coming Soon!
+A React component library containing both primitives and complex UI.
 
 # About
 At the moment, this project is a work in progress.  We have combined primitive components from multiple React component libraries to make a completely open source UI component library that you can can use in your project!
@@ -11,3 +11,17 @@ NOTE: to properly use this lib, you will need to import the base grommet stylesh
 
 ## Status
 This is a brand new project and is totally experimental.  As it matures, we will release more information, including documentation.  Stay tuned!
+
+# Documentation
+
+## Getting Started
+TBD
+
+## Installation
+TBD
+
+## Components
+- Navbar
+- Responsive Image
+- Loading Indicator
+- ToastMessage
