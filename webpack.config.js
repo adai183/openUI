@@ -28,6 +28,13 @@ module.exports = {
     ]
   },
   module: {
+    preloaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'remove-flow-types',
+        include: path.join(__dirname, 'src')
+      }
+    ],
     loaders: [
       {
         test: /\.jsx?$/,

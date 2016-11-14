@@ -1,4 +1,9 @@
+/* PRAGMA: Custom Components */
 export Navbar from './Navbar';
+export ResponsiveImage from './ResponsiveImage';
+export LoadingIndicator from './LoadingIndicator';
+
+/* PRAGMA: Grommet Components */
 export Accordion from 'grommet/components/Accordion';
 export AccordionPanel from 'grommet/components/AccordionPanel';
 export Anchor from 'grommet/components/Anchor';
@@ -468,6 +473,7 @@ export SocialYoutubeIcon from 'grommet/components/icons/base/SocialYoutube';
 export SortIcon from 'grommet/components/icons/base/Sort';
 export SplitIcon from 'grommet/components/icons/base/Split';
 export SplitsIcon from 'grommet/components/icons/base/Splits';
+export SpinningIcon from 'grommet/components/icons/Spinning';
 export StakeholderIcon from 'grommet/components/icons/base/Stakeholder';
 export StandardsThreeDEffectsIcon from 'grommet/components/icons/base/Standards-3dEffects';
 export StandardsConnectivityIcon from 'grommet/components/icons/base/StandardsConnectivity';

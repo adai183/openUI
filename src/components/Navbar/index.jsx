@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import cssModules from 'react-css-modules';
-import styles from './index.module.css';
 /* eslint-disable */
 import {
   Menu,
@@ -14,8 +13,22 @@ import {
   CloseIcon,
 } from 'components';
 /* eslint-enable */
+import styles from './index.module.css';
 
 class Navbar extends Component {
+  static propTypes = {
+    logo: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      }),
+    ),
+    isResponsive: PropTypes.bool.isRequired,
+  };
+  static defaultProps = {
+    isResponsive: true,
+  };
   constructor() {
     super();
     this.renderTitle = this.renderTitle.bind(this);
@@ -160,20 +173,5 @@ class Navbar extends Component {
     );
   }
 }
-
-Navbar.propTypes = {
-  logo: PropTypes.string,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-    }),
-  ),
-  isResponsive: PropTypes.bool.isRequired,
-};
-
-Navbar.defaultProps = {
-  isResponsive: true,
-};
 
 export default cssModules(Navbar, styles);
