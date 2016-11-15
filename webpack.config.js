@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
-    './src/examples/app/index'
+    './src/examples/chat_example/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
